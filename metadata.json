@@ -1,7 +1,0 @@
-{
-  "owner": "azure",
-  "name": "aks-set-context",
-  "visibility": "public",
-  "description": "Sets the kubeconfig on the machine to communicate with the Azure Kubernetes cluster.",
-  "block_publish": false
-}
