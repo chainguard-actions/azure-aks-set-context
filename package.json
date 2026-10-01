@@ -1,0 +1,40 @@
+{
+   "name": "aks-set-context-action",
+   "version": "5.0.1",
+   "private": true,
+   "type": "module",
+   "main": "lib/index.js",
+   "scripts": {
+      "build": "esbuild src/index.ts --bundle --platform=node --target=node20 --format=esm --outfile=lib/index.js --banner:js=\"import { createRequire } from 'module';const require = createRequire(import.meta.url);\"",
+      "test:integration": "node scripts/integration-test.mjs",
+      "test": "vitest run",
+      "test-coverage": "vitest run --coverage",
+      "format": "prettier --write .",
+      "format-check": "prettier --check .",
+      "prepare": "husky"
+   },
+   "keywords": [
+      "actions",
+      "node",
+      "setup"
+   ],
+   "author": "GitHub",
+   "license": "MIT",
+   "engines": {
+      "npm": ">=11.10.0"
+   },
+   "dependencies": {
+      "@actions/core": "^3.0.1",
+      "@actions/exec": "^3.0.0",
+      "@actions/io": "^3.0.2",
+      "husky": "^9.1.7"
+   },
+   "devDependencies": {
+      "@types/node": "^26.5.0",
+      "@vitest/coverage-v8": "^5.0.0",
+      "esbuild": "^0.28.2",
+      "prettier": "^3.9.5",
+      "typescript": "^7.0.2",
+      "vitest": "^5.0.0"
+   }
+}
